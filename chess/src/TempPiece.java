@@ -21,28 +21,28 @@ public class TempPiece {
             }
         }
         if(piece == 'K'){
-            if(this.location[0] + 2 && this.location[1] + 1) {
+            if(location[0] == this.location[0] + 2 && location[1] == this.location[1] + 1) {
             	tempBoolean = true;
             }
-            if(this.location[0] + 2 && this.location[1] - 1) {
+            if(location[0] == this.location[0] + 2 && location[0] == this.location[1] - 1) {
             	tempBoolean = true;
             }
-            if(this.location[0] - 2 && this.location[1] - 1) {
+            if(location[0] == this.location[0] - 2 && location[0] == this.location[1] - 1) {
             	tempBoolean = true;
             }
-            if(this.location[0] - 2 && this.location[1] + 1) {
+            if(location[0] == this.location[0] - 2 && location[0] == this.location[1] + 1) {
             	tempBoolean = true;
             }
-            if(this.location[0] + 1 && this.location[1] + 2) {
+            if(location[0] == this.location[0] + 1 && location[0] == this.location[1] + 2) {
             	tempBoolean = true;
             }
-            if(this.location[0] + 1 && this.location[1] - 2) {
+            if(location[0] == this.location[0] + 1 && location[0] == this.location[1] - 2) {
                 tempBoolean = true;
             }
-            if(this.location[0] - 1 && this.location[1] - 2) {
+            if(location[0] == this.location[0] - 1 && location[0] == this.location[1] - 2) {
                 tempBoolean = true;
             }
-            if(this.location[0] - 1 && this.location[1] + 2) {
+            if(location[0] == this.location[0] - 1 && location[0] == this.location[1] + 2) {
                 tempBoolean = true;
             }           
         }
