@@ -33,7 +33,7 @@ public class Piece {
     public void setLocation(Integer[] location) {
         this.location = location;
     }
-    public Integer[][] getLocation() {
+    public Integer[] getLocation() {
         return location;
     }
     public char getPiece() {
