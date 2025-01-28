@@ -20,7 +20,7 @@ public class TempPiece {
                 tempBoolean = true;
             }
         }
-        if(piece == 'K'){
+        if(piece == 'N'){
             if(location[0] == this.location[0] + 2 && location[1] == this.location[1] + 1) {
             	tempBoolean = true;
             }
