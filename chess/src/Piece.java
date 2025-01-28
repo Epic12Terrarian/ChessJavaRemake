@@ -62,6 +62,15 @@ public class Piece {
     public void setPiece(String piece) {
         this.piece = piece;
     }
+    public void makeMove(Integer[] location){
+        if (canMove(location)) {
+            setLocation(location);
+        }
+        else {
+            System.out.println("Nuh Uh, Sowwy but you cannowt mobve tere");
+            //System.out.println("I'm gonna kms for typing that");
+        }
+    }
     public void setLocation(Integer[] location) {
         this.tempInt = this.location[0];
         this.tempInt = this.location[1];
