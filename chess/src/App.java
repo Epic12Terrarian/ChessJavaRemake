@@ -9,8 +9,10 @@ public class App {
                 board[i][j] = " ";
             }
         }
-
-        System.out.println("Text in console to make sure this file is still functional");
+        buildBoard();
+        TempPiece Rook = new TempPiece('R', {2,4});
+        
+        //System.out.println("Text in console to make sure this file is still functional");
         buildBoard();
 
     }
