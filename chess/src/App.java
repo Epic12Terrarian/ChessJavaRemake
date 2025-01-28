@@ -3,18 +3,22 @@ import java.util.Arrays;
 public class App {
     public static String[][] board = new String[10][10];
     
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
+        clearBoard();
+
+        buildBoard();
+        Piece Rook = new Piece("R", new Integer[]{8,6});
+        
+        System.out.println("Text in console to make sure this file is still functional");
+        buildBoard();
+
+    }
+    public static void clearBoard() {
         for(int i = 0; i < 10; i++){ //this loop is used to fill the board file so I can display it later and not need to worry about anything being undefined
             for(int j = 0; j < 10; j++){
                 board[i][j] = " ";
             }
         }
-        buildBoard();
-        TempPiece Rook = new TempPiece('R', {2,4});
-        
-        //System.out.println("Text in console to make sure this file is still functional");
-        buildBoard();
-
     }
     public static void buildBoard() {
         System.out.println(board[8][1] + "|" + board[8][2] + "|" + board[8][3] + "|" + board[8][4] + "|" + board[8][5] + "|" + board[8][6] + "|" + board[8][7] + "|" + board[8][8]);

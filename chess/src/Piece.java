@@ -1,5 +1,5 @@
 public class Piece {
-    char piece;
+    String piece;
     Integer[] location = {0,0};
     Integer tempInt = 946203842;
     Integer tempInt2 = 907981;
@@ -7,7 +7,7 @@ public class Piece {
     int team = 0; //0 for white, 1 for black (uppercase and lowercase is how I'll distinguish them apart)
 
     
-    public Piece(char piece, Integer[] location){
+    public Piece(String piece, Integer[] location){
         this.piece = piece;
         this.location = location;
         this.tempInt = location[0];
@@ -15,12 +15,12 @@ public class Piece {
         App.board[tempInt][tempInt2] = piece;
     }
     public boolean canMove(Integer[] location) {
-        if(piece == 'R'){ //A method that helps figure out how a rook can move || will need to be revised later to take into account pieces potentially being in the path
+        if(piece == "R"){ //A method that helps figure out how a rook can move || will need to be revised later to take into account pieces potentially being in the path
             if (location[0] == this.location[0] || location[1] == this.location[1]) {
                 tempBoolean = true;
             }
         }
-        if(piece == 'N'){
+        if(piece == "N"){
             if(location[0] == this.location[0] + 2 && location[1] == this.location[1] + 1) {
             	tempBoolean = true;
             }
@@ -59,22 +59,22 @@ public class Piece {
 
         return tempBoolean;
     }
-    public void setPiece(char piece) {
+    public void setPiece(String piece) {
         this.piece = piece;
     }
     public void setLocation(Integer[] location) {
-        this.tempInt = this.location[0]
-        this.tempInt = this.location[1]
+        this.tempInt = this.location[0];
+        this.tempInt = this.location[1];
         App.board[tempInt][tempInt2] = " ";
         this.location = location;
         this.tempInt = location[0];
-        this.tempInt2 = location[1]
+        this.tempInt2 = location[1];
         App.board[tempInt][tempInt2] = piece;
     }
     public Integer[] getLocation() {
         return location;
     }
-    public char getPiece() {
+    public String getPiece() {
         return piece;
     }
 }
