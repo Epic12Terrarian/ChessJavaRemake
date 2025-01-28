@@ -2,6 +2,7 @@ public class TempPiece {
     char piece;
     Integer[] location = {0,0};
     Integer tempInt = 946203842;
+    Integer tempInt2 = 907981;
     boolean tempBoolean = true;
     int team = 0; //0 for white, 1 for black (uppercase and lowercase is how I'll distinguish them apart)
 
@@ -31,7 +32,13 @@ public class TempPiece {
         this.piece = piece;
     }
     public void setLocation(Integer[] location) {
+        this.tempInt = this.location[0]
+        this.tempInt = this.location[1]
+        App.board[tempInt][tempInt2] = " ";
         this.location = location;
+        this.tempInt = location[0];
+        this.tempInt2 = location[1]
+        App.board[tempInt][tempInt2] = piece;
     }
     public Integer[] getLocation() {
         return location;
