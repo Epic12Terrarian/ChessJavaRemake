@@ -1,4 +1,3 @@
-# ChessNotationEdition
-Text based chess where you need to use chess notation* to move your pieces.
+# ChessJavaRemake
 
-*Scope might end up changing to less of a focus on chess notation due to difficulties with figuring out what piece you are trying to move
+Currently text based chess made in the programming language of Java.
