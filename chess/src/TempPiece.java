@@ -10,6 +10,9 @@ public class TempPiece {
     public Piece(char piece, Integer[] location){
         this.piece = piece;
         this.location = location;
+        this.tempInt = location[0];
+        this.tempInt2 = location[1];
+        App.board[tempInt][tempInt2] = piece;
     }
     public boolean canMove(Integer[] location) {
         if(piece == 'R'){ //A method that helps figure out how a rook can move || will need to be revised later to take into account pieces potentially being in the path
