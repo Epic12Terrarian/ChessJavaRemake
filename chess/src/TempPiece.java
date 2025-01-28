@@ -17,9 +17,37 @@ public class TempPiece {
     public boolean canMove(Integer[] location) {
         if(piece == 'R'){ //A method that helps figure out how a rook can move || will need to be revised later to take into account pieces potentially being in the path
             if (location[0] == this.location[0] || location[1] == this.location[1]) {
-                return true;
+                tempBoolean = true;
             }
         }
+        if(piece == 'K'){
+            if(this.location[0] + 2 && this.location[1] + 1) {
+            	tempBoolean = true;
+            }
+            if(this.location[0] + 2 && this.location[1] - 1) {
+            	tempBoolean = true;
+            }
+            if(this.location[0] - 2 && this.location[1] - 1) {
+            	tempBoolean = true;
+            }
+            if(this.location[0] - 2 && this.location[1] + 1) {
+            	tempBoolean = true;
+            }
+            if(this.location[0] + 1 && this.location[1] + 2) {
+            	tempBoolean = true;
+            }
+            if(this.location[0] + 1 && this.location[1] - 2) {
+                tempBoolean = true;
+            }
+            if(this.location[0] - 1 && this.location[1] - 2) {
+                tempBoolean = true;
+            }
+            if(this.location[0] - 1 && this.location[1] + 2) {
+                tempBoolean = true;
+            }           
+        }
+
+        
         tempInt = location[0];
         if (tempInt < 1 || tempInt > 8) {
             tempBoolean = false;
