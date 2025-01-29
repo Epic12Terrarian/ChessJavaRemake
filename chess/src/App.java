@@ -26,10 +26,14 @@ public class App {
             }
         }
     }
-    public static void movePiece(Piece[][] pieceBoard, int fromRow, int fromCol, int toRow, int toCol) {
-        Piece temp = pieceBoard[toRow][toCol];
-        pieceBoard[toRow][toCol] = pieceBoard[fromRow][fromCol];
-        pieceBoard[fromRow][fromCol] = temp;
+    public static void movePiece(int fromRow, int fromCol, int toRow, int toCol) {
+        if(pieceBoard[fromRow][fromCol].canMove()){
+            pieceBoard.makeMove(new Integer[]{toRow,toCol})
+            
+            Piece temp = pieceBoard[toRow][toCol];
+            pieceBoard[toRow][toCol] = pieceBoard[fromRow][fromCol];
+            pieceBoard[fromRow][fromCol] = temp;      
+        }
     }
     public static void buildBoard() {
         System.out.println(board[8][1] + "|" + board[8][2] + "|" + board[8][3] + "|" + board[8][4] + "|" + board[8][5] + "|" + board[8][6] + "|" + board[8][7] + "|" + board[8][8]);
