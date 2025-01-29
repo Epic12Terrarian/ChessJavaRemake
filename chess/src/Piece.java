@@ -5,13 +5,17 @@ public class Piece {
     Integer tempInt2 = 907981;
     boolean tempBoolean = true;
     int team = 0; //0 for white, 1 for black (uppercase and lowercase is how I'll distinguish them apart)
+    boolean isEmptySpace = false;
 
-    
+    public Piece(){
+        isEmptySpace = true;
+    }
     public Piece(String piece, Integer[] location){
         this.piece = piece;
         this.location = location;
         this.tempInt = location[0];
         this.tempInt2 = location[1];
+        isEmptySpace = false;
         App.board[tempInt][tempInt2] = piece;
     }
     public boolean canMove(Integer[] location) {
@@ -85,5 +89,11 @@ public class Piece {
     }
     public String getPiece() {
         return piece;
+    }
+    public boolean getIsEmptySpace(){
+        return isEmptySpace;
+    }
+    public void setIsEmptySpace(boolean isEmptySpace){
+        this.isEmptySpace = isEmptySpace;
     }
 }
