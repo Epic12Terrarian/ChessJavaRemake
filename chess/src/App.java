@@ -1,8 +1,12 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class App {
     public static String[][] board = new String[10][10];
     public static Piece[][] pieceBoard = new Piece[10][10];
+    public static boolean gameOngoing = true;
+    public static Scanner h = new Scanner(System.in);
+
     
     public static void main(String[] args){
         for(int g = 0; g < 10; g++){ //this loop is also used to fill the board file so I can do background logic with it later and not need to worry about anything being undefined
@@ -11,9 +15,20 @@ public class App {
             }
         }
         clearBoard();
-
-        buildBoard();
         Piece[8][6] Rook = new Piece("R", new Integer[]{8,6});
+        Piece[3][5] Knight = new Piece("N", new Integer[]{3,5});
+        while(gameOngoing){
+            buildBoard();
+            
+            
+            
+            
+            
+        }
+        
+        
+        buildBoard();
+        
         
         System.out.println("Text in console to make sure this file is still functional");
         buildBoard();
