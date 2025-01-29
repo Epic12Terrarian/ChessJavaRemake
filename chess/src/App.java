@@ -5,6 +5,11 @@ public class App {
     public static Piece[][] pieceBoard = new Piece[10][10];
     
     public static void main(String[] args){
+        for(int g = 0; g < 10; g++){ //this loop is also used to fill the board file so I can do background logic with it later and not need to worry about anything being undefined
+            for(int f = 0; f < 10; f++){
+                pieceBoard[g][f] = new Piece();
+            }
+        }
         clearBoard();
 
         buildBoard();
