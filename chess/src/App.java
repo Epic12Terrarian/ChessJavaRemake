@@ -2,12 +2,13 @@ import java.util.Arrays;
 
 public class App {
     public static String[][] board = new String[10][10];
+    public static Piece[][] pieceBoard = new Piece[10][10];
     
     public static void main(String[] args){
         clearBoard();
 
         buildBoard();
-        Piece Rook = new Piece("R", new Integer[]{8,6});
+        Piece[8][6] Rook = new Piece("R", new Integer[]{8,6});
         
         System.out.println("Text in console to make sure this file is still functional");
         buildBoard();
@@ -19,6 +20,11 @@ public class App {
                 board[i][j] = " ";
             }
         }
+    }
+    public static void movePiece(Piece[][] pieceBoard, int fromRow, int fromCol, int toRow, int toCol) {
+        Piece temp = pieceBoard[toRow][toCol];
+        pieceBoard[toRow][toCol] = pieceBoard[fromRow][fromCol];
+        pieceBoard[fromRow][fromCol] = temp;
     }
     public static void buildBoard() {
         System.out.println(board[8][1] + "|" + board[8][2] + "|" + board[8][3] + "|" + board[8][4] + "|" + board[8][5] + "|" + board[8][6] + "|" + board[8][7] + "|" + board[8][8]);
