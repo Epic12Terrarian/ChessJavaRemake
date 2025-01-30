@@ -6,6 +6,7 @@ public class App {
     public static Piece[][] pieceBoard = new Piece[10][10];
     public static boolean gameOngoing = true;
     public static Scanner h = new Scanner(System.in);
+    public static Integer[] input = {0,0};
 
     
     public static void main(String[] args){
@@ -15,12 +16,18 @@ public class App {
             }
         }
         clearBoard();
-        Piece[8][6] Rook = new Piece("R", new Integer[]{8,6});
-        Piece[3][5] Knight = new Piece("N", new Integer[]{3,5});
+        pieceBoard[8][6].reConstruct("R", new Integer[]{8,6});
+        pieceBoard[3][5].reConstruct("N", new Integer[]{3,5});
         while(gameOngoing){
             buildBoard();
             
-            
+            System.out.println("Pick a Piece to move.(X)");
+            try {
+                input[0] = h.nextInt();
+            } catch (Exception e) {
+                System.out.println("Sowwuwu but you can't do dat. Pwease use a coordinate that is vawid.");
+                //System.out.println("We gonna kms with this one too");
+            }
             
             
             
@@ -42,8 +49,8 @@ public class App {
         }
     }
     public static void movePiece(int fromRow, int fromCol, int toRow, int toCol) {
-        if(pieceBoard[fromRow][fromCol].canMove()){
-            pieceBoard.makeMove(new Integer[]{toRow,toCol})
+        if(pieceBoard[fromRow][fromCol].canMove(new Integer[]{toRow,toCol}) == true){
+            pieceBoard[fromRow][fromCol].makeMove(new Integer[]{toRow,toCol});
             
             Piece temp = pieceBoard[toRow][toCol];
             pieceBoard[toRow][toCol] = pieceBoard[fromRow][fromCol];
