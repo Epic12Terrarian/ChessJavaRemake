@@ -27,12 +27,12 @@ public class Piece {
         App.board[tempInt][tempInt2] = piece;
     }
     public boolean canMove(Integer[] location) {
-        if(piece.equalsIgnoreCase("R")){ //A method that helps figure out how a rook can move || will need to be revised later to take into account pieces potentially being in the path
+        if(piece.equalsIgnoreCase("R") == true){ //A method that helps figure out how a rook can move || will need to be revised later to take into account pieces potentially being in the path
             if (location[0] == this.location[0] || location[1] == this.location[1]) {
                 tempBoolean = true;
             }
         }
-        if(piece.equalsIgnoreCase("N")){
+        if(piece.equalsIgnoreCase("N") == true){
             if(location[0] == this.location[0] + 2 && location[1] == this.location[1] + 1) {
             	tempBoolean = true;
             }
@@ -75,7 +75,7 @@ public class Piece {
         this.piece = piece;
     }
     public void makeMove(Integer[] location){
-        if (canMove(location)) {
+        if (canMove(location) == true) {
             setLocation(location);
         }
         else {
@@ -84,9 +84,9 @@ public class Piece {
         }
     }
     public void setLocation(Integer[] location) {
-        this.tempInt = this.location[0];
-        this.tempInt = this.location[1];
-        App.board[tempInt][tempInt2] = " ";
+        //this.tempInt = this.location[0];
+        //this.tempInt = this.location[1];
+        App.board[this.location[0]][this.location[1]] = " ";
         this.location = location;
         this.tempInt = location[0];
         this.tempInt2 = location[1];

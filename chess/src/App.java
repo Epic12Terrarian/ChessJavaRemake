@@ -82,6 +82,8 @@ public class App {
         if(pieceBoard[fromRow][fromCol].canMove(new Integer[]{toRow,toCol}) == true){
             pieceBoard[fromRow][fromCol].makeMove(new Integer[]{toRow,toCol});
             
+            //board[fromRow][fromCol] = " ";
+
             Piece temp = pieceBoard[toRow][toCol];
             pieceBoard[toRow][toCol] = pieceBoard[fromRow][fromCol];
             pieceBoard[fromRow][fromCol] = temp;      
