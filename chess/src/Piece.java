@@ -27,6 +27,7 @@ public class Piece {
         App.board[tempInt][tempInt2] = piece;
     }
     public boolean canMove(Integer[] location) {
+        tempBoolean = false;
         if(piece.equalsIgnoreCase("R") == true){ //A method that helps figure out how a rook can move || will need to be revised later to take into account pieces potentially being in the path
             if (location[0] == this.location[0] || location[1] == this.location[1]) {
                 tempBoolean = true;
